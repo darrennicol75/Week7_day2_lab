@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src ="./js/bundle.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <header>
+	      <h1>Countries of the World</h1>
+	      <h2>Total population: {{ totalPopulation }} </h2>
+	    </header>
+<button v-on:click="fetchCountries">get countries</button>
+<div>
+<label for="">Select Country</label>
+<input v-model="selectCountry" type="text">
+</div>
+<div v-for="country in filterCountry">
+  <ul>
+    <li >{{ country.name }}
+    </li>
+    <img :src= "country.flag">
+  </ul>
+
+</div>
+</div>
+
+</body>
+</html>
